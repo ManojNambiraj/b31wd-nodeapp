@@ -187,7 +187,7 @@ app.post("/login", async function (req, res) {
       if (compare) {
         //Generate Token
         let token = jsonwebtoken.sign({ id: user._id }, "asdfghjkl", {
-          expiresIn: "1m",
+          expiresIn: "1h",
         });
         res.json({ token });
       } else {
